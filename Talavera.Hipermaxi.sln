@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7D47A310-7B0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talavera.Hipermaxi.Domain", "Talavera.Hipermaxi.Domain\Talavera.Hipermaxi.Domain.csproj", "{5D1ACF70-611D-4D4A-A6D6-BA86ECB80866}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talavera.Hipermaxi.Application", "Talavera.Hipermaxi.Application\Talavera.Hipermaxi.Application.csproj", "{0D39F8E4-A512-431D-B219-ED0014AF3747}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 		{5D1ACF70-611D-4D4A-A6D6-BA86ECB80866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D1ACF70-611D-4D4A-A6D6-BA86ECB80866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D1ACF70-611D-4D4A-A6D6-BA86ECB80866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D39F8E4-A512-431D-B219-ED0014AF3747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D39F8E4-A512-431D-B219-ED0014AF3747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D39F8E4-A512-431D-B219-ED0014AF3747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D39F8E4-A512-431D-B219-ED0014AF3747}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5D1ACF70-611D-4D4A-A6D6-BA86ECB80866} = {7D47A310-7B01-43AD-BBD8-BECB200E81E1}
+		{0D39F8E4-A512-431D-B219-ED0014AF3747} = {7D47A310-7B01-43AD-BBD8-BECB200E81E1}
 	EndGlobalSection
 EndGlobal
