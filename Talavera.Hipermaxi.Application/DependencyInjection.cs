@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
-using Talavera.Hipermaxi.Application.Abstraction.Behaviors;
+using Talavera.Hipermaxi.Application.Abstractions.Behaviors;
 
 namespace Talavera.Hipermaxi.Application;
 

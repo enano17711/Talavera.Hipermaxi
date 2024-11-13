@@ -4,39 +4,20 @@ using Talavera.Hipermaxi.Domain.Users;
 
 namespace Talavera.Hipermaxi.Infrastructure.Configurations;
 
-internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
+public class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder.ToTable("users");
+        builder.ToTable("Users");
 
-        builder.HasKey(user => user.Id);
+        builder.HasKey(x => x.Id);
 
-        builder.Property(user => user.Name)
-            .HasMaxLength(200);
-
-        builder.Property(user => user.Birthday)
-            .HasColumnType("date");
-
-        builder.Property(user => user.Profession)
-            .HasMaxLength(200);
-
-        builder.Property(user => user.IdentityId)
-            .HasMaxLength(200);
-
-        builder.Property(user => user.Nationality)
-            .HasMaxLength(200);
-
-        builder.Property(user => user.PhoneNumber)
-            .HasMaxLength(200);
-
-        builder.Property(user => user.Email)
-            .HasMaxLength(400);
-
-        builder.Property(user => user.Salary);
-
-        builder.HasIndex(user => user.Email).IsUnique();
-
-        builder.HasIndex(user => user.IdentityId).IsUnique();
+        builder.Property(x => x.Name).IsRequired();
+        builder.Property(x => x.BirthDate).IsRequired();
+        builder.Property(x => x.Profession).IsRequired();
+        builder.Property(x => x.Nationality).IsRequired();
+        builder.Property(x => x.PhoneNumber).IsRequired();
+        builder.Property(x => x.Email).IsRequired();
+        builder.Property(x => x.Salary).IsRequired();
     }
 }

@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Talavera.Hipermaxi.Application.Exceptions;
-using Talavera.Hipermaxi.Domain.Abstraction;
+using Talavera.Hipermaxi.Domain.Abstractions;
 
 namespace Talavera.Hipermaxi.Infrastructure;
 

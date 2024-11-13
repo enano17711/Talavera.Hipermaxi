@@ -1,53 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Talavera.Hipermaxi.Domain.Abstraction;
-using Talavera.Hipermaxi.Domain.Users.Events;
+﻿using Talavera.Hipermaxi.Domain.Abstractions;
 
-namespace Talavera.Hipermaxi.Domain.Users
+namespace Talavera.Hipermaxi.Domain.Users;
+
+public class User : Entity
 {
-    public sealed class User : Entity
+    /*nombre, fecha nacimiento, profesión, nacionalidad, teléfono,
+        correo, sueldo.*/
+
+    public User(Guid id, string name, DateTime birthDate, string profession, string nationality, string phoneNumber,
+        string email, decimal salary) : base(id)
     {
-        public User(Guid id, string name, DateTime birthday, string profession, string nationality, string phoneNumber,
-            string email, decimal salary) : base(id)
-        {
-            Name = name;
-            Birthday = birthday;
-            Profession = profession;
-            Nationality = nationality;
-            PhoneNumber = phoneNumber;
-            Email = email;
-            Salary = salary;
-        }
+        Name = name;
+        BirthDate = birthDate;
+        Profession = profession;
+        Nationality = nationality;
+        PhoneNumber = phoneNumber;
+        Email = email;
+        Salary = salary;
+    }
 
-        public User()
-        {
-        }
+    public User()
+    {
+    }
 
-        public string Name { get; set; }
-        public DateTime Birthday { get; set; }
-        public string Profession { get; set; }
-        public string Nationality { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Email { get; set; }
-        public decimal Salary { get; set; }
-        public string IdentityId { get; private set; }
+    public string Name { get; private set; }
+    public DateTime BirthDate { get; private set; }
+    public string Profession { get; private set; }
+    public string Nationality { get; private set; }
+    public string PhoneNumber { get; private set; }
+    public string Email { get; private set; }
+    public decimal Salary { get; private set; }
 
-        public static User Create(string name, DateTime birthday, string profession, string nationality,
-            string phoneNumber, string email, decimal salary)
-        {
-            var user = new User(Guid.NewGuid(), name, birthday, profession, nationality, phoneNumber, email, salary);
-
-            user.RaiseDomainEvent(new UserCreatedDomainEvent(user.Id));
-
-            return user;
-        }
-
-        public void SetIdentityId(string identityId)
-        {
-            IdentityId = identityId;
-        }
+    public void Update(string requestName, DateTime requestBirthDate, string requestProfession,
+        string requestNationality, string requestPhoneNumber, string requestEmail, decimal requestSalary)
+    {
+        Name = requestName;
+        BirthDate = requestBirthDate;
+        Profession = requestProfession;
+        Nationality = requestNationality;
+        PhoneNumber = requestPhoneNumber;
+        Email = requestEmail;
+        Salary = requestSalary;
     }
 }
