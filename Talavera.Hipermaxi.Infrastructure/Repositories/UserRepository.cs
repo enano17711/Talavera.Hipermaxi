@@ -17,8 +17,7 @@ internal sealed class UserRepository : Repository<User>, IUserRepository
             .CountAsync(cancellationToken);
     }
 
-    public async Task<List<User>> GetAllAsync(int page, int pageSize, string sortBy, string sortOrder, string filterBy,
-        string filterValue,
+    public async Task<List<User>> GetAllAsync(int page, int pageSize, string sortBy, string sortOrder,
         CancellationToken cancellationToken = default)
     {
         var orderByMap = new Dictionary<string, Expression<Func<User, object>>>

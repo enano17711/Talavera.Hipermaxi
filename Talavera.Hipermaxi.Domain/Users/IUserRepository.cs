@@ -4,8 +4,7 @@ public interface IUserRepository
 {
     Task<int> GetCountAsync(CancellationToken cancellationToken = default);
 
-    Task<List<User>> GetAllAsync(int page, int pageSize, string sortBy, string sortOrder, string filterBy,
-        string filterValue,
+    Task<List<User>> GetAllAsync(int page, int pageSize, string sortBy, string sortOrder,
         CancellationToken cancellationToken = default);
 
     Task<User?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);

@@ -24,10 +24,10 @@ public class UserController : ControllerBase
 
     [HttpGet("all")]
     public async Task<IActionResult> GetAll([FromQuery] int page, [FromQuery] int pageSize, [FromQuery] string sortBy,
-        [FromQuery] string sortOrder, [FromQuery] string filterBy, [FromQuery] string filterValue)
+        [FromQuery] string sortOrder)
     {
         var users = await _sender.Send(
-            new Application.Users.GetUsers.GetUsersQuery(page, pageSize, sortBy, sortOrder, filterBy, filterValue));
+            new Application.Users.GetUsers.GetUsersQuery(page, pageSize, sortBy, sortOrder));
 
         Response.Headers.Append("X-Metadata", JsonSerializer.Serialize(users.Value.Count));
 

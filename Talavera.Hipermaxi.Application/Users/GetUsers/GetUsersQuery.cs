@@ -7,7 +7,5 @@ public record GetUsersQuery(
     int Page,
     int PageSize,
     string SortBy,
-    string SortOrder,
-    string FilterBy,
-    string FilterValue)
+    string SortOrder)
     : IQuery<(List<UserResponse> Items, int Count)>;

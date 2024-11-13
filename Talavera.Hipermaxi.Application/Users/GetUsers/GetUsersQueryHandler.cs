@@ -21,7 +21,7 @@ public class GetUsersQueryHandler : IQueryHandler<GetUsersQuery, ( List<UserResp
     {
         var usersCount = await _userRepository.GetCountAsync();
         var users = await _userRepository.GetAllAsync(request.Page, request.PageSize, request.SortBy, request.SortOrder,
-            request.FilterBy, request.FilterValue, cancellationToken);
+            cancellationToken);
 
         var usersDto = new List<UserResponse>(users.Count);
 
