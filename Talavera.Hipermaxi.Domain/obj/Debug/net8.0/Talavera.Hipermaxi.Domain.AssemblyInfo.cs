@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Talavera.Hipermaxi.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6310bc07218f38b1c95ecc63edf3c4d03587b2f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a76d1dfb58688021a232fa9c97e1897df9e9fda")]
 [assembly: System.Reflection.AssemblyProductAttribute("Talavera.Hipermaxi.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Talavera.Hipermaxi.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
